@@ -3,10 +3,10 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-from onemaxcode.py import oneMaxProblem
+#from onemaxcode.py import oneMaxProblem
 
 # Create your models here.
 
-class oneMaxProblemExc(models.Model):
-    onemaxProject = oneMaxProblem(20)
-    onemaxProject.onemaxSolution(100,10,0.5,0.2)
+#class oneMaxProblemExc(models.Model):
+#    onemaxProject = oneMaxProblem(20)
+#    onemaxProject.onemaxSolution(100,10,0.5,0.2)
