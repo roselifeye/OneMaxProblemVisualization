@@ -69,7 +69,7 @@ option = {
   },
   yAxis: {
     type: 'value',
-    //data: individuals,
+    data: individuals,
     splitNumber: 1,
     splitLine: {
       show: true,
