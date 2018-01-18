@@ -69,7 +69,7 @@ option = {
   },
   yAxis: {
     type: 'value',
-    name: 'Individuals',
+    //name: 'Individuals',
     splitNumber: 1,
     max:20,
     splitLine: {
@@ -82,7 +82,8 @@ option = {
     axisLabel: {
       formatter: function (value, index){
         return value.toFixed(0);
-      }
+      },
+      interval:20
     },
     axisLine: {
       show: false
