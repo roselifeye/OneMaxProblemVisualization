@@ -57,7 +57,7 @@ option = {
       data: [220, 182, 191, 234, 290, 330, 310]
     },
     {
-      name: 'Mid Fitness',
+      name: 'Min Fitness',
       type: 'line',
       //stack: '总量',
       data: [150, 232, 201, 154, 190, 330, 410]

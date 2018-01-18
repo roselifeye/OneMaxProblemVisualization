@@ -3,7 +3,7 @@ var individualChart = echarts.init(document.getElementById('box1'));
 
 // 指定图表的配置项和数据
 var genepoints = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11','12','13','14','15','16','17','18','19'];
-var individuals = ['1', '3', '8', '13', '16', '19', '20'];
+var individuals = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11','12','13','14','15','16','17','18','19','20'];
 
 var data = [
   [0, 1, 8], [0, 3, 8], [0, 5, 8],
@@ -43,7 +43,7 @@ option = {
   tooltip: {
     position: 'top',
     formatter: function(params) {
-      return params.value[2] + ' commits in ' + genepoints[params.value[0]] + ' of ' + individuals[params.value[1]];
+      return 'Value 1' + ' in ' + genepoints[params.value[0]];
     }
   },
   grid: {
@@ -68,13 +68,19 @@ option = {
     }
   },
   yAxis: {
-    type: 'category',
+    type: 'value',
     //data: individuals,
+    splitNumber: 1,
     splitLine: {
       show: true,
       lineStyle: {
         color: '#999',
         type: 'dashed'
+      }
+    },
+    axisLabel: {
+      formatter: function (value, index) {
+        return value.toFixed(3);
       }
     },
     axisLine: {
