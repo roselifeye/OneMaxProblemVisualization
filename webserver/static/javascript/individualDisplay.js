@@ -69,8 +69,9 @@ option = {
   },
   yAxis: {
     type: 'value',
-    data: individuals,
+    name: 'Individuals',
     splitNumber: 1,
+    max:20,
     splitLine: {
       show: true,
       lineStyle: {
@@ -79,7 +80,7 @@ option = {
       }
     },
     axisLabel: {
-      formatter: function (value, index) {
+      formatter: function (value, index){
         return value.toFixed(0);
       }
     },
@@ -91,7 +92,7 @@ option = {
     yAxisIndex: 0,
     type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
     start: 0, // 左边在 10% 的位置。
-    end: 50 // 右边在 50% 的位置。
+    end: 100 // 右边在 50% 的位置。
   }],
   series: [{
     name: 'One',
