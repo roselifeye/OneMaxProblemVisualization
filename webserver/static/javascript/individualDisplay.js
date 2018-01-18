@@ -68,7 +68,7 @@ option = {
     }
   },
   yAxis: {
-    type: 'value',
+    type: 'category',
     //name: 'Individuals',
     splitNumber: 1,
     max:20,
