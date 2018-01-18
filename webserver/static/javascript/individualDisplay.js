@@ -43,7 +43,7 @@ option = {
   tooltip: {
     position: 'top',
     formatter: function(params) {
-      return 'Value 1' + ' in ' + genepoints[params.value[0]];
+      return 'Gene point ' + genepoints[params.value[0]];
     }
   },
   grid: {
@@ -80,7 +80,7 @@ option = {
     },
     axisLabel: {
       formatter: function (value, index) {
-        return value.toFixed(3);
+        return value.toFixed(0);
       }
     },
     axisLine: {
