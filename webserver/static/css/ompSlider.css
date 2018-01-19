@@ -1,0 +1,10 @@
+.ui-slider {
+  background: #434d5a;
+  border-radius: 20px;
+  border: none;
+  height: 10px;
+}
+
+.ui-slider-handle {
+  border-radius: 20px;
+}

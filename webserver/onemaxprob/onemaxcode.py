@@ -152,9 +152,3 @@ class oneMaxProblem():
 
         best_ind = tools.selBest(pop, 1)[0]
         print("Best individual is %s, %s" % (best_ind, best_ind.fitness.values))
-
-def main():
-    oneMax = oneMaxProblem(20)
-    oneMax.onemaxSolution(100,10,0.5,0.2)
-if __name__ == "__main__":
-    main()

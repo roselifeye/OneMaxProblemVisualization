@@ -1,0 +1,65 @@
+div {
+  margin: 0;
+  padding: 0
+}
+
+#container {
+  width: 1240px;
+  height: 700px;
+  border: 1px solid #ccc;
+}
+
+#container .box1 {
+  width: 600px;
+  height: 600px;
+  float: left;
+}
+
+#container .box2 {
+  margin-left: 40px;
+  width: 600px;
+  height: 600px;
+  float: left;
+}
+
+#container .box3 {
+  margin-top: 620px;
+  width: 600px;
+  height: 80px;
+}
+
+#container .inputBox1 {
+  width: 300px;
+  height: 40px;
+  float: left;
+}
+
+#container .inputBox2 {
+  width: 300px;
+  height: 40px;
+  float: left;
+}
+
+#container .inputBox3 {
+  width: 300px;
+  height: 40px;
+  float: left;
+}
+
+#container .inputBox4 {
+  width: 300px;
+  height: 40px;
+  float: left;
+}
+
+#container .slider {
+  margin-left: 10px;
+  width: 260px;
+  height: 25px;
+}
+
+#container .slder-title {
+  width: 300px;
+  font-size: 15px;
+  text-align: center;
+}
