@@ -73,7 +73,7 @@ class oneMaxProblem():
 
         # create an initial population of 10 individuals (where
         # each individual is a list of integers)
-        pop = self.toolbox.population(n=10)
+        pop = self.toolbox.population(n=poolsize)
 
         # CXPB  is the probability with which two individuals
         #       are crossed
