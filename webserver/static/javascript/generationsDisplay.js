@@ -180,6 +180,68 @@ function newGenerationdata() {
   })
 }
 
+geneChart.setOption({
+  tooltip: {
+    trigger: 'axis'
+  },
+  legend: {
+    data: ['Best Fitness', 'Avg Fitness', 'Min Fitness']
+  },
+  grid: {
+    left: 2,
+    bottom: 60,
+    right: 10,
+    containLabel: true
+  },
+  toolbox: {
+    feature: {
+      saveAsImage: {}
+    }
+  },
+  xAxis: {
+    name: 'Generations',
+    nameLocation: 'middle',
+    nameGap: 20,
+    nameTextStyle: {
+      fontSize: 18
+    },
+    type: 'category',
+    boundaryGap: false,
+    data: generations
+  },
+  yAxis: {
+    name: 'Fitness',
+    nameTextStyle: {
+      fontSize: 18
+    },
+    type: 'value'
+  },
+  dataZoom: [{ // 这个dataZoom组件，默认控制x轴。
+    type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
+    start: 0, // 左边在 10% 的位置。
+    end: 100 // 右边在 50% 的位置。
+  }],
+  series: [{
+      name: 'Best Fitness',
+      type: 'line',
+      //stack: '总量',
+      data: maxFitList
+    },
+    {
+      name: 'Avg Fitness',
+      type: 'line',
+      //stack: '总量',
+      data: avgFitList
+    },
+    {
+      name: 'Min Fitness',
+      type: 'line',
+      //stack: '总量',
+      data: minFitList
+    },
+  ]
+};)
+
 // setInterval(function() {
   // newGenerationdata()
 // }, 6 * 1); // 间歇执行
