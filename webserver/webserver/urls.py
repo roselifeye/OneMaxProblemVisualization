@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import include, url
+from onemaxprob import views
 
 urlpatterns = [
     url(r'', include('onemaxprob.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^onemaxSol/$', views.onemaxSol, name='onemaxSol'),
 ]

@@ -4,13 +4,13 @@ div {
 }
 
 #container {
-  width: 1240px;
+  width: 1540px;
   height: 700px;
   border: 1px solid #ccc;
 }
 
 #container .box1 {
-  width: 600px;
+  width: 900px;
   height: 600px;
   float: left;
 }

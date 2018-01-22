@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-from onemaxcode import oneMaxProblem
+#from onemaxcode import oneMaxProblem
 
 # Create your models here.
 

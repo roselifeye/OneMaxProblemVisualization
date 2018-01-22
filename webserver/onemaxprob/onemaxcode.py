@@ -9,7 +9,10 @@ from deap import base
 from deap import creator
 from deap import tools
 class oneMaxProblem():
-
+    maxFitList = [];
+    avgFitList = [];
+    minFitList = [];
+    popList = [];
     def __init__(self, genelen):
         self.genelen = genelen
 
@@ -136,7 +139,19 @@ class oneMaxProblem():
             pop[:] = offspring
 
             # Gather all the fitnesses in one list and print the stats
-            fits = [ind.fitness.values[0] for ind in pop]
+            # fits = [ind.fitness.values[0] for ind in pop]
+            # for ind in pop:
+            for index in range(len(pop)):
+                fits.append(pop[index].fitness.values[0])
+                for indexG in range(len(pop)):
+                    # print pop[index][indexG]
+                    if (pop[index])[indexG] == 1:
+                        indStat = []
+                        indStat.append(indexG)
+                        indStat.append(index)
+                        indStat.append(8)
+                        print("------%s" % indStat)
+                        self.popList.append(indStat)
 
             length = len(pop)
             mean = sum(fits) / length
@@ -147,7 +162,11 @@ class oneMaxProblem():
             print("  Max %s" % max(fits))
             print("  Avg %s" % mean)
             print("  Std %s" % std)
-
+            # print("  ind %s" % pop)
+            self.maxFitList.append(max(fits))
+            self.avgFitList.append(mean)
+            self.minFitList.append(min(fits))
+            # self.popList = pop
         print("-- End of (successful) evolution --")
 
         best_ind = tools.selBest(pop, 1)[0]
