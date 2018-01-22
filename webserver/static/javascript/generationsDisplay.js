@@ -2,9 +2,6 @@
 var geneChart = echarts.init(document.getElementById('box2'));
 // alert("error111");
 //  var generations = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11','12','13','14','15','16','17','18','19','20'];
-var genepoints = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11','12','13','14','15','16','17','18','19'];
-var individuals = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11','12','13','14','15','16','17','18','19','20'];
-
 var generations = Array.apply(null, Array(100)).map(function(item, i) {
   return i + 1;
 });
@@ -13,8 +10,6 @@ var maxFitList = [];
 var avgFitList = [];
 var minFitList = [];
 var popList = [];
-var indData = [];
-
 
 function newGenerationdata() {
   // alert("error22233");
@@ -32,7 +27,6 @@ function newGenerationdata() {
       var avgFitList = [];
       var minFitList = [];
       var popList = [];
-      var indData = [];
       // for (var i = 0; i < onemaxData.length; i++) {
       for (var i = 0; i < onemaxData.maxFitList.length; i++) {
         maxFitList.push(onemaxData.maxFitList[i]); //挨个取出类别并填入类别数组
@@ -46,14 +40,8 @@ function newGenerationdata() {
       for (var i = 0; i < onemaxData.minFitList.length; i++) {
         minFitList.push(onemaxData.minFitList[i]); //挨个取出类别并填入类别数组
       }
-      for (var i = 0; i < onemaxData.popList.length; i++) {
-        indData.push(onemaxData.popList[i]); //挨个取出类别并填入类别数组
-      }
       // alert(onemaxData.maxFitList.length)
-      indData = data.map(function(item) {
-        return [item[0], item[1], item[2]];
-      });
-      // }
+
       option1 = {
         tooltip: {
           trigger: 'axis'
@@ -115,86 +103,9 @@ function newGenerationdata() {
           },
         ]
       };
-      option2 = {
-        title: {
-          text: 'One Max Problem',
-          link: 'http://www.cs.mun.ca/~sy2036/'
-        },
-        legend: {
-          data: ['One'],
-          left: 'right'
-        },
-        tooltip: {
-          position: 'top',
-          formatter: function(params) {
-            return 'Gene point ' + genepoints[params.value[0]];
-          }
-        },
-        grid: {
-          left: 2,
-          bottom: 10,
-          right: 60,
-          containLabel: true
-        },
-        xAxis: {
-          type: 'category',
-          data: genepoints,
-          boundaryGap: false,
-          splitLine: {
-            show: true,
-            lineStyle: {
-              color: '#999',
-              type: 'dashed'
-            }
-          },
-          axisLine: {
-            show: false
-          }
-        },
-        yAxis: {
-          type: 'value',
-          //name: individuals,
-          splitNumber: 20,
-          max: 20,
-          splitLine: {
-            show: true,
-            lineStyle: {
-              color: '#999',
-              type: 'dashed'
-            }
-          },
-          axisLabel: {
-            formatter: function(value, index) {
-              return value.toFixed(0);
-            },
-            //interval:20
-          },
-          axisLine: {
-            show: false
-          }
-        },
-        dataZoom: [{ // 这个dataZoom组件，默认控制x轴。
-          yAxisIndex: 0,
-          type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
-          start: 0, // 左边在 10% 的位置。
-          end: 100 // 右边在 50% 的位置。
-        }],
-        series: [{
-          name: 'One',
-          type: 'scatter',
-          symbolSize: function(val) {
-            return val[2] * 2;
-          },
-          data: indData,
-          animationDelay: function(idx) {
-            return idx * 5;
-          }
-        }]
-      };
 
       // myChart.showLoading();
       geneChart.setOption(option1);
-      // individualChart.setOption(option2)
     }
   })
 }

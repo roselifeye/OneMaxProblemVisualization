@@ -10,7 +10,7 @@ import json
 from onemaxcode import oneMaxProblem
 
 onemaxProject = oneMaxProblem(20)
-onemaxProject.onemaxSolution(100, 10, 0.5, 0.2)
+onemaxProject.onemaxSolution(100, 20, 0.5, 0.2)
 
 
 def index(request):
