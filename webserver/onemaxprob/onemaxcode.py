@@ -139,10 +139,10 @@ class oneMaxProblem():
             pop[:] = offspring
 
             # Gather all the fitnesses in one list and print the stats
-            # fits = [ind.fitness.values[0] for ind in pop]
+            fits = [ind.fitness.values[0] for ind in pop]
             # for ind in pop:
             for index in range(len(pop)):
-                fits.append(pop[index].fitness.values[0])
+                # fits.append(pop[index].fitness.values[0])
                 for indexG in range(len(pop)):
                     # print pop[index][indexG]
                     if (pop[index])[indexG] == 1:
@@ -150,7 +150,7 @@ class oneMaxProblem():
                         indStat.append(indexG)
                         indStat.append(index)
                         indStat.append(8)
-                        print("------%s" % indStat)
+                        # print("------%s" % indStat)
                         self.popList.append(indStat)
 
             length = len(pop)
@@ -162,6 +162,7 @@ class oneMaxProblem():
             print("  Max %s" % max(fits))
             print("  Avg %s" % mean)
             print("  Std %s" % std)
+            print("    Len %s" % sum(fits))
             # print("  ind %s" % pop)
             self.maxFitList.append(max(fits))
             self.avgFitList.append(mean)

@@ -1,6 +1,5 @@
 // 基于准备好的dom，初始化echarts实例
-var individualChart = echarts.init(document.getElementById('box1'));
-
+var individualChart = echarts.init(document.getElementById('box11'));
 // 指定图表的配置项和数据
 var genepoints = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11','12','13','14','15','16','17','18','19'];
 var individuals = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11','12','13','14','15','16','17','18','19','20'];

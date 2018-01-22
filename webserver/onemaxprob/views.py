@@ -22,5 +22,5 @@ def onemaxSol(request):
                   'avgFitList': onemaxProject.avgFitList,
                   'minFitList': onemaxProject.minFitList,
                   'popList': onemaxProject.popList}
-    print onemaxProject.popList
+    # print onemaxProject.popList
     return JsonResponse(onemaxData)
