@@ -13,6 +13,9 @@ $(function() {
     })
     .on("slidechange", function(e,ui) {
       generationNum = ui.value;
+      generations = Array.apply(null, Array(generationNum)).map(function(item, i) {
+        return i + 1;
+      });
       initIndChart();
       initGeneChart();
       $.ajax({
@@ -26,11 +29,6 @@ $(function() {
           alert("error");
         }, //错误执行方法
         success: function(arg) {
-          generations = Array.apply(null, Array(generationNum)).map(function(item, i) {
-            return i + 1;
-          });
-          // newInddata();
-          // newGenerationdata();
         }
       })
     });
@@ -74,6 +72,9 @@ $(function() {
     })
     .on("slidechange", function(e,ui) {
       genesNum = ui.value;
+      genepoints = Array.apply(null, Array(genesNum)).map(function(item, i) {
+        return i + 1;
+      });
       initIndChart();
       initGeneChart();
       $.ajax({
@@ -87,12 +88,6 @@ $(function() {
           alert("error");
         }, //错误执行方法
         success: function(arg) {
-          genepoints = Array.apply(null, Array(int(genesNum))).map(function(item, i) {
-            return i + 1;
-          });
-          alert(genepoints);
-          newInddata();
-          // newGenerationdata();
         }
       })
     });

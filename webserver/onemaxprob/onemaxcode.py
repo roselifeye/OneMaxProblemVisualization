@@ -63,6 +63,10 @@ class oneMaxProblem():
         self.generations = generations
         self.poolsize = poolsize
         self.genelen = genelen
+        self.maxFitList = []
+        self.avgFitList = []
+        self.minFitList = []
+        self.popList = []
         random.seed(64)
 
         # Structure initializers
@@ -100,7 +104,7 @@ class oneMaxProblem():
         g = 0
 
         # Begin the evolution
-        while max(fits) < self.genelen and g < self.generations:
+        while max(fits) < self.genelen or g < self.generations:
             # A new generation
             g = g + 1
             print("-- Generation %i --" % g)
@@ -167,7 +171,7 @@ class oneMaxProblem():
             print("  Max %s" % max(fits))
             print("  Avg %s" % mean)
             print("  Std %s" % std)
-            print("    Len %s" % sum(fits))
+            print("    Len %s" % len(fits))
             # print("  ind %s" % pop)
             self.maxFitList.append(max(fits))
             self.avgFitList.append(mean)
