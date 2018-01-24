@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'', include('onemaxprob.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^onemaxSol/$', views.onemaxSol, name='onemaxSol'),
+    url(r'^parameterUpdate/$', views.parameterUpdate, name='parameterUpdate'),
 ]

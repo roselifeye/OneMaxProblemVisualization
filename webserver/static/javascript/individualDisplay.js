@@ -134,8 +134,7 @@ function newInddata() {
     }
   })
 }
-
-// setInterval(function() {
-// newInddata()
-// }, 6 * 1); // 间歇执行
 newInddata();
+setInterval(function() {
+  newInddata()
+}, 6 * 0.01); // 间歇执行

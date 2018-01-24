@@ -9,8 +9,9 @@ import json
 
 from onemaxcode import oneMaxProblem
 
-onemaxProject = oneMaxProblem(20)
-onemaxProject.onemaxSolution(100, 20, 0.5, 0.2)
+onemaxProject = oneMaxProblem()
+# generations, poolsize, genelen, crossRate, MutaRate
+onemaxProject.onemaxSolution(150, 500, 40, 0.5, 0.2)
 
 
 def index(request):
@@ -24,3 +25,9 @@ def onemaxSol(request):
                   'popList': onemaxProject.popList}
     # print onemaxProject.popList
     return JsonResponse(onemaxData)
+
+def parameterUpdate(request):
+    # print request.GET['generationNum']
+    # parameters = json.loads(request.body)
+    onemaxProject.onemaxSolution(int(request.GET['generationNum']), int(request.GET['poolSizeNum']), int(request.GET['genesNum']), 0.5, 0.2)
+    return HttpResponse('success')

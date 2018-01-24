@@ -13,8 +13,8 @@ class oneMaxProblem():
     avgFitList = [];
     minFitList = [];
     popList = [];
-    def __init__(self, genelen):
-        self.genelen = genelen
+    def __init__(self):
+
 
         # the goal ('fitness') function to be maximized
         def evalOneMax(individual):
@@ -51,14 +51,7 @@ class oneMaxProblem():
         # drawn randomly from the current generation.
         self.toolbox.register("select", tools.selTournament, tournsize=3)
 
-        # Structure initializers
-        #                         define 'individual' to be an individual
-        #                         consisting of 20 'attr_bool' elements ('genes')
-        self.toolbox.register("individual", tools.initRepeat, creator.Individual,
-            self.toolbox.attr_bool, genelen)
 
-        # define the population to be a list of individuals
-        self.toolbox.register("population", tools.initRepeat, list, self.toolbox.individual)
 
     #----------
     # Parameters:
@@ -66,10 +59,19 @@ class oneMaxProblem():
     #   Poolsize:
     #   Crossover Rate:
     #   Mutation Rate:
-    def onemaxSolution(self, generations, poolsize, crossRate, MutaRate):
+    def onemaxSolution(self, generations, poolsize, genelen, crossRate, MutaRate):
         self.generations = generations
         self.poolsize = poolsize
+        self.genelen = genelen
         random.seed(64)
+
+        # Structure initializers
+        #                         define 'individual' to be an individual
+        #                         consisting of 20 'attr_bool' elements ('genes')
+        self.toolbox.register("individual", tools.initRepeat, creator.Individual, self.toolbox.attr_bool, genelen)
+
+        # define the population to be a list of individuals
+        self.toolbox.register("population", tools.initRepeat, list, self.toolbox.individual)
 
         # create an initial population of 10 individuals (where
         # each individual is a list of integers)
@@ -141,10 +143,13 @@ class oneMaxProblem():
             # Gather all the fitnesses in one list and print the stats
             fits = [ind.fitness.values[0] for ind in pop]
             # for ind in pop:
+            #print ("  len %s" % len(pop))
             for index in range(len(pop)):
                 # fits.append(pop[index].fitness.values[0])
-                for indexG in range(len(pop)):
+                for indexG in range(len(pop[index])):
                     # print pop[index][indexG]
+                    #print ("  index %s" % index)
+                    #print ("  indexG %s" % indexG)
                     if (pop[index])[indexG] == 1:
                         indStat = []
                         indStat.append(indexG)
