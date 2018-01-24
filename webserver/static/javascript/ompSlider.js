@@ -13,6 +13,8 @@ $(function() {
     })
     .on("slidechange", function(e,ui) {
       generationNum = ui.value;
+      initIndChart();
+      initGeneChart();
       $.ajax({
         type: "GET",
         url: 'parameterUpdate',
@@ -27,7 +29,8 @@ $(function() {
           generations = Array.apply(null, Array(generationNum)).map(function(item, i) {
             return i + 1;
           });
-          newInddata();
+          // newInddata();
+          // newGenerationdata();
         }
       })
     });
@@ -43,6 +46,8 @@ $(function() {
     })
     .on("slidechange", function(e,ui) {
       poolSizeNum = ui.value;
+      initIndChart();
+      initGeneChart();
       $.ajax({
         type: "GET",
         url: 'parameterUpdate',
@@ -69,6 +74,8 @@ $(function() {
     })
     .on("slidechange", function(e,ui) {
       genesNum = ui.value;
+      initIndChart();
+      initGeneChart();
       $.ajax({
         type: "GET",
         url: 'parameterUpdate',
@@ -80,11 +87,12 @@ $(function() {
           alert("error");
         }, //错误执行方法
         success: function(arg) {
-          alert("111");
           genepoints = Array.apply(null, Array(int(genesNum))).map(function(item, i) {
             return i + 1;
           });
+          alert(genepoints);
           newInddata();
+          // newGenerationdata();
         }
       })
     });
