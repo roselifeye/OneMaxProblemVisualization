@@ -25,11 +25,11 @@ function dataRepresent() {
         minFitList.push(onemaxData.minFitList[i]); //挨个取出类别并填入类别数组
 
       }
-      var maxlastData = []
-      var avglastData = []
-      var minlastData = []
+      // var maxlastData = []
+      // var avglastData = []
+      // var minlastData = []
       // clearInterval(timeTicket);
-      alert('111')
+      // alert('111')
       // timeTicket = setInterval(function() {
       //   currentDataLen = option2.series[0].data.length;
       //   alert(currentDataLen)
@@ -63,8 +63,6 @@ function dataRepresent() {
       //   }
       // }, 100);
       // geneChart.setOption(option2);
-
-
 
       option2.xAxis.data = generations
       option2.series[0].data = maxFitList
