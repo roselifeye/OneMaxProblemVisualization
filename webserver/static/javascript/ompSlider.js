@@ -1,6 +1,6 @@
 $(function() {
   var generationNum = 150;
-  var poolSizeNum = 200;
+  var poolSizeNum = 100;
   var genesNum = 20;
   $(".slider1")
     .slider({
@@ -35,7 +35,7 @@ $(function() {
 
   $(".slider2")
     .slider({
-      max: 2000,
+      max: 200,
       min: 100,
       value: poolSizeNum,
     })
