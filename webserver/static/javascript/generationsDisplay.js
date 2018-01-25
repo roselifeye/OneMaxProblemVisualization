@@ -43,40 +43,37 @@ function initGeneChart() {
       },
       type: 'category',
       boundaryGap: false,
-      data: generations
+      data:generations
     },
     yAxis: {
       name: 'Fitness',
       nameTextStyle: {
         fontSize: 18
       },
-      type: 'value'
+      type: 'value',
+      data: []
     },
     dataZoom: [{ // 这个dataZoom组件，默认控制x轴。
       type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
       start: 0, // 左边在 10% 的位置。
-      end: 100 // 右边在 50% 的位置。
+      end: 10 // 右边在 50% 的位置。
     }],
     series: [{
-        xAxisIndex: 0,
-        yAxisIndex: 0,
         name: 'Best Fitness',
         type: 'line',
-        data: []
+        data:[]
       },
       {
-        xAxisIndex: 1,
-        yAxisIndex: 1,
         name: 'Avg Fitness',
         type: 'line',
-        data: []
+        data : []
       },
       {
-        xAxisIndex: 2,
-        yAxisIndex: 2,
+        // xAxisIndex: 2,
+        // yAxisIndex: 2,
         name: 'Min Fitness',
         type: 'line',
-        data: []
+        data : []
       },
     ]
   };
@@ -85,8 +82,4 @@ function initGeneChart() {
   geneChart.setOption(option2);
 }
 initGeneChart()
-
-
-setInterval(function() {
-  dataRepresent()
-}, 1000); // 间歇执行
+dataRepresent()

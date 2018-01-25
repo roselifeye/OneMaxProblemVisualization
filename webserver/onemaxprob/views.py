@@ -30,4 +30,5 @@ def parameterUpdate(request):
     # print request.GET['generationNum']
     # parameters = json.loads(request.body)
     onemaxProject.onemaxSolution(int(request.GET['generationNum']), int(request.GET['poolSizeNum']), int(request.GET['genesNum']), 0.5, 0.2)
-    return HttpResponse('success')
+    responData = {'status':1}
+    return JsonResponse(responData)

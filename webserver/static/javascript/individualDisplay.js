@@ -69,15 +69,16 @@ function initIndChart() {
         show: false
       }
     },
+    animation:false,
     series: [{
       name: 'One',
       type: 'scatter',
       symbolSize: function(val) {
-        return val[2] * 2;
+        return val[2]*1.5;
       },
-      animationDelay: function(idx) {
-        return idx * 5;
-      },
+      // animationDelay: function(idx) {
+      //   return idx * 0.1;
+      // },
       data: []
     }]
   };
