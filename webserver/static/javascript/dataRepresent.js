@@ -33,36 +33,38 @@ function dataRepresent() {
       var avglastData = []
       var minlastData = []
       clearInterval(timeTicket);
+      alert('111')
       timeTicket = setInterval(function() {
           currentDataLen = option2.series[0].data.length;
+          alert(currentDataLen)
           if (currentDataLen < onemaxData.maxFitList.length) {
             maxlastData = maxFitList[option2.series[0].data.length];
             avglastData = avgFitList[option2.series[0].data.length];
             minlastData = minFitList[option2.series[0].data.length];
-            axisData = currentDataLen+1;
+            axisData = currentDataLen + 1;
             // 动态数据接口 addData
             geneChart.addData([
               [
                 0, // 系列索引
                 lastData, // 新增数据
                 false, // 新增数据是否从队列头部插入
-                false, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
+                true, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
                 axisData // 坐标轴标签
               ],
               [
                 1, // 系列索引
                 avglastData, // 新增数据
                 false, // 新增数据是否从队列头部插入
-                false, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
+                true, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
               ],
               [
                 2, // 系列索引
                 minlastData, // 新增数据
                 false, // 新增数据是否从队列头部插入
-                false, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
+                true, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
               ],
             ]);
-          }, 100);
+          }, 100); geneChart.setOption(option2);
       }
 
 
