@@ -147,6 +147,9 @@ class oneMaxProblem():
             # print("  TTTTT %s" % temp)
             fits = [ind.fitness.values[0] for ind in pop]
 
+            # Each generation pop
+            # Data format: [0,1,8]: X, Y, Size of the dot.
+            generPopList = []
             popLen = len(pop)
             if popLen > 20 :
                 popLen = 20;
@@ -161,8 +164,8 @@ class oneMaxProblem():
                         # Size of the red dot
                         indStat.append(8)
                         # print("------%s" % indStat)
-                        self.popList.append(indStat)
-
+                        # self.popList.append(indStat)
+                        generPopList.append(indStat)
 
             length = len(pop)
             mean = sum(fits) / length
@@ -178,6 +181,7 @@ class oneMaxProblem():
             self.maxFitList.append(max(fits))
             self.avgFitList.append(mean)
             self.minFitList.append(min(fits))
+            self.popList.append(generPopList)
             # self.popList = pop
         # print("-- End of (successful) evolution --")
 

@@ -30,7 +30,6 @@ $(function() {
         }, //错误执行方法
         success: function(arg) {
           clearInterval(timeout1);
-          clearInterval(timeout2);
           initIndChart();
           initGeneChart();
           dataRepresent();
@@ -65,7 +64,6 @@ $(function() {
         }, //错误执行方法
         success: function(arg) {
           clearInterval(timeout1);
-          clearInterval(timeout2);
           initIndChart();
           initGeneChart();
           dataRepresent();
@@ -103,7 +101,6 @@ $(function() {
         }, //错误执行方法
         success: function(arg) {
           clearInterval(timeout1);
-          clearInterval(timeout2);
           initIndChart();
           initGeneChart();
           dataRepresent();

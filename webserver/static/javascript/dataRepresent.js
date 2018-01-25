@@ -38,18 +38,18 @@ function dataRepresent() {
               },
             ],
             dataZoom: [{
-              end: (currentIndex/onemaxData.maxFitList.length)*100,
+              end: (currentIndex/onemaxData.maxFitList.length)*100+3,
             }],
           });
-          currentIndex += 1;
-        } else {
-          clearInterval(timeout1);
-        }
-      }, 170);
 
-      timeout2 = setInterval(function() {
-        if (popIndex < onemaxData.popList.length) {
-          indData.push(onemaxData.popList[popIndex]);
+          var currentGenePopLen = onemaxData.popList[currentIndex].length;
+          // alert(onemaxData.popList[popIndex][0])
+          genePopList = onemaxData.popList[currentIndex]
+          for (var i = 0; i < genePopList.length; i++) {
+            indData.push(genePopList[i])
+          }
+
+          // indData.push(onemaxData.popList[popIndex]);
           indData = indData.map(function(item) {
             return [item[0], item[1], item[2]];
           });
@@ -59,12 +59,11 @@ function dataRepresent() {
               data: indData
             }, ],
           });
-          popIndex += 1;
+          currentIndex += 1;
         } else {
-          clearInterval(timeout2);
+          clearInterval(timeout1);
         }
-      }, 25);
-
+      }, 170);
     }
   })
 }
