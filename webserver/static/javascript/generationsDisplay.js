@@ -58,16 +58,22 @@ function initGeneChart() {
       end: 100 // 右边在 50% 的位置。
     }],
     series: [{
+        xAxisIndex: 0,
+        yAxisIndex: 0,
         name: 'Best Fitness',
         type: 'line',
         data: []
       },
       {
+        xAxisIndex: 1,
+        yAxisIndex: 1,
         name: 'Avg Fitness',
         type: 'line',
         data: []
       },
       {
+        xAxisIndex: 2,
+        yAxisIndex: 2,
         name: 'Min Fitness',
         type: 'line',
         data: []
@@ -83,4 +89,4 @@ initGeneChart()
 
 setInterval(function() {
   dataRepresent()
-}, 100); // 间歇执行
+}, 1000); // 间歇执行
