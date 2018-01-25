@@ -83,4 +83,4 @@ initGeneChart()
 
 setInterval(function() {
   dataRepresent()
-}, 500); // 间歇执行
+}, 300); // 间歇执行
