@@ -1,7 +1,7 @@
 $(function() {
   var generationNum = 150;
-  var poolSizeNum = 500;
-  var genesNum = 40;
+  var poolSizeNum = 200;
+  var genesNum = 20;
   $(".slider1")
     .slider({
       max: 200,
@@ -37,7 +37,7 @@ $(function() {
     .slider({
       max: 2000,
       min: 100,
-      value: 500,
+      value: poolSizeNum,
     })
     .slider("float", {
       rest: "label"

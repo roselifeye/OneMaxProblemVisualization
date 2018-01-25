@@ -2,7 +2,7 @@
 var individualChart = echarts.init(document.getElementById('box1'));
 
 // 指定图表的配置项和数据
-var genepoints = Array.apply(null, Array(40)).map(function(item, i) {
+var genepoints = Array.apply(null, Array(20)).map(function(item, i) {
   return i + 1;
 });
 var individuals = Array.apply(null, Array(20)).map(function(item, i) {

@@ -116,7 +116,6 @@ class oneMaxProblem():
 
             # Apply crossover and mutation on the offspring
             for child1, child2 in zip(offspring[::2], offspring[1::2]):
-
                 # cross two individuals with probability CXPB
                 if random.random() < CXPB:
                     self.toolbox.mate(child1, child2)
@@ -127,7 +126,6 @@ class oneMaxProblem():
                     del child2.fitness.values
 
             for mutant in offspring:
-
                 # mutate an individual with probability MUTPB
                 if random.random() < MUTPB:
                     self.toolbox.mutate(mutant)
@@ -145,19 +143,17 @@ class oneMaxProblem():
             pop[:] = offspring
 
             # Gather all the fitnesses in one list and print the stats
+            # temp = sorted(pop,key=lambda x:(x.fitness.values[0]) ,reverse=False)
+            # print("  TTTTT %s" % temp)
             fits = [ind.fitness.values[0] for ind in pop]
-            # for ind in pop:
-            #print ("  len %s" % len(pop))
             for index in range(len(pop)):
                 # fits.append(pop[index].fitness.values[0])
                 for indexG in range(len(pop[index])):
-                    # print pop[index][indexG]
-                    #print ("  index %s" % index)
-                    #print ("  indexG %s" % indexG)
                     if (pop[index])[indexG] == 1:
                         indStat = []
                         indStat.append(indexG)
                         indStat.append(index)
+                        # Size of the red dot
                         indStat.append(8)
                         # print("------%s" % indStat)
                         self.popList.append(indStat)
