@@ -18,10 +18,6 @@ function dataRepresent() {
       var avgFitList = [];
       var minFitList = [];
       var popList = [];
-      var maxFitList = [];
-      var avgFitList = [];
-      var minFitList = [];
-      var popList = [];
       // for (var i = 0; i < onemaxData.length; i++) {
       for (var i = 0; i < onemaxData.maxFitList.length; i++) {
         maxFitList.push(onemaxData.maxFitList[i]); //挨个取出类别并填入类别数组
@@ -34,38 +30,7 @@ function dataRepresent() {
       var minlastData = []
       clearInterval(timeTicket);
       alert('111')
-      timeTicket = setInterval(function() {
-        currentDataLen = option2.series[0].data.length;
-        alert(currentDataLen)
-        if (currentDataLen < onemaxData.maxFitList.length) {
-          maxlastData = maxFitList[option2.series[0].data.length];
-          avglastData = avgFitList[option2.series[0].data.length];
-          minlastData = minFitList[option2.series[0].data.length];
-          axisData = currentDataLen + 1;
-          // 动态数据接口 addData
-          geneChart.addData([
-            [
-              0, // 系列索引
-              lastData, // 新增数据
-              false, // 新增数据是否从队列头部插入
-              true, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
-              axisData // 坐标轴标签
-            ],
-            [
-              1, // 系列索引
-              avglastData, // 新增数据
-              false, // 新增数据是否从队列头部插入
-              true, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
-            ],
-            [
-              2, // 系列索引
-              minlastData, // 新增数据
-              false, // 新增数据是否从队列头部插入
-              true, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
-            ],
-          ]);
-        }
-      }, 100);
+
       geneChart.setOption(option2);
 
 
