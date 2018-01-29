@@ -49,7 +49,7 @@ function initIndChart() {
     },
     yAxis: {
       type: 'value',
-      data: individuals,
+      // data: individuals,
       splitNumber: 20,
       max: 50,
       splitLine: {
