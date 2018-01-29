@@ -49,9 +49,9 @@ function initIndChart() {
     },
     yAxis: {
       type: 'value',
-      // data: individuals,
-      splitNumber: 20,
-      max: 50,
+      data: individuals,
+      // splitNumber: 20,
+      // max: 50,
       splitLine: {
         show: true,
         lineStyle: {
@@ -72,8 +72,8 @@ function initIndChart() {
     dataZoom: [{ // 这个dataZoom组件，默认控制x轴。
       type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
       orient:"vertical",
-      start: 0, // 左边在 10% 的位置。
-      end: 20 // 右边在 50% 的位置。
+      start: 0,
+      end: 20,
     }],
     animation:false,
     series: [{
