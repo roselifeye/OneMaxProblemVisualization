@@ -2,7 +2,7 @@
 var geneChart = echarts.init(document.getElementById('box2'));
 // alert("error111");
 //  var generations = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11','12','13','14','15','16','17','18','19','20'];
-var generations = Array.apply(null, Array(150)).map(function(item, i) {
+var generations = Array.apply(null, Array(100)).map(function(item, i) {
   return i + 1;
 });
 

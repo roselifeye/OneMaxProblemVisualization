@@ -151,8 +151,8 @@ class oneMaxProblem():
             # Data format: [0,1,8]: X, Y, Size of the dot.
             generPopList = []
             popLen = len(pop)
-            if popLen > 20 :
-                popLen = 20;
+            if popLen > 50 :
+                popLen = 50;
             for index in range(popLen):
                 # fits.append(pop[index].fitness.values[0])
                 for indexG in range(len(pop[index])):

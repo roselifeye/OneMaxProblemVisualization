@@ -5,7 +5,7 @@ var individualChart = echarts.init(document.getElementById('box1'));
 var genepoints = Array.apply(null, Array(20)).map(function(item, i) {
   return i + 1;
 });
-var individuals = Array.apply(null, Array(20)).map(function(item, i) {
+var individuals = Array.apply(null, Array(50)).map(function(item, i) {
   return i + 1;
 });
 var indData = [];
@@ -49,9 +49,9 @@ function initIndChart() {
     },
     yAxis: {
       type: 'value',
-      //name: individuals,
+      data: individuals,
       splitNumber: 20,
-      max: 20,
+      max: 50,
       splitLine: {
         show: true,
         lineStyle: {
