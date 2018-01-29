@@ -162,7 +162,7 @@ class oneMaxProblem():
                         indStat.append(indexG)
                         indStat.append(index+1)
                         # Size of the red dot
-                        indStat.append(8)
+                        indStat.append(6)
                         # print("------%s" % indStat)
                         # self.popList.append(indStat)
                         generPopList.append(indStat)
