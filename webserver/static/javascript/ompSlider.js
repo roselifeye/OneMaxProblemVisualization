@@ -4,10 +4,10 @@ $(function() {
   var genesNum = 20;
   $(".slider1")
     .slider({
-      max: 200,
-      min: 80,
+      max: 250,
+      min: 100,
       value: generationNum,
-      step: 20,
+      step: 50,
     })
     .slider("pips", {
       rest: "label",
