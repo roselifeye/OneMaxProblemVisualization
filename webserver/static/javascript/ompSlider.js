@@ -1,5 +1,5 @@
 $(function() {
-  var generationNum = 150;
+  var generationNum = 100;
   var poolSizeNum = 100;
   var genesNum = 20;
   $(".slider1")
