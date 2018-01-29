@@ -50,7 +50,7 @@ function dataRepresent() {
           for (var i = 0; i < genePopList.length; i++) {
             indData.push(genePopList[i])
           }
-          if (individualChartRefreshRate == 0) {
+          if (individualChartRefreshRate == 5) {
             // indData.push(onemaxData.popList[popIndex]);
             indData = indData.map(function(item) {
               return [item[0], item[1], item[2]];
