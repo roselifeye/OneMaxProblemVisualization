@@ -18,8 +18,8 @@ function dataRepresent() {
       var indData = [];
       var currentIndex = 0
       var popIndex = 0
-      //  Here, we set the rate is 10 which means the individual chart will be refreshed when generation chart refresh every 5 times.
-      var individualChartRefreshRate = 10;
+      //  Here, we set the rate is 5 which means the individual chart will be refreshed when generation chart refresh every 5 times.
+      var individualChartRefreshRate = 5;
       timeout1 = setInterval(function() {
         if (currentIndex < onemaxData.maxFitList.length) {
           maxFitList.push(onemaxData.maxFitList[currentIndex]);
@@ -50,7 +50,7 @@ function dataRepresent() {
           for (var i = 0; i < genePopList.length; i++) {
             indData.push(genePopList[i])
           }
-          if (individualChartRefreshRate == 10) {
+          if (individualChartRefreshRate == 5) {
             // indData.push(onemaxData.popList[popIndex]);
             indData = indData.map(function(item) {
               return [item[0], item[1], item[2]];
@@ -65,7 +65,7 @@ function dataRepresent() {
           individualChartRefreshRate--;
           currentIndex += 1;
           if (individualChartRefreshRate == 0) {
-            individualChartRefreshRate = 10;
+            individualChartRefreshRate = 5;
           }
         } else {
           clearInterval(timeout1);
