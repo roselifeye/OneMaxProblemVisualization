@@ -80,7 +80,7 @@ function initIndChart() {
       name: 'One',
       type: 'scatter',
       symbolSize: function(val) {
-        return val[2]*1.5;
+        return val[2]*1.3;
       },
       // animationDelay: function(idx) {
       //   return idx * 0.1;
