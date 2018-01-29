@@ -5,7 +5,7 @@ div {
 
 #container {
   width: 1540px;
-  height: 700px;
+  height: 820px;
   border: 1px solid #ccc;
 }
 
@@ -25,30 +25,30 @@ div {
 #container .box3 {
   margin-top: 620px;
   width: 600px;
-  height: 80px;
+  height: 120px;
 }
 
 #container .inputBox1 {
   width: 300px;
-  height: 40px;
+  height: 60px;
   float: left;
 }
 
 #container .inputBox2 {
   width: 300px;
-  height: 40px;
+  height: 60px;
   float: left;
 }
 
 #container .inputBox3 {
   width: 300px;
-  height: 40px;
+  height: 60px;
   float: left;
 }
 
 #container .inputBox4 {
   width: 300px;
-  height: 40px;
+  height: 60px;
   float: left;
 }
 

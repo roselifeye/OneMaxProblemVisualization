@@ -5,12 +5,15 @@ $(function() {
   $(".slider1")
     .slider({
       max: 200,
-      min: 50,
+      min: 80,
       value: generationNum,
+      step: 20,
     })
-    .slider("float", {
-      rest: "label"
+    .slider("pips", {
+      rest: "label",
+      step: 20,
     })
+    .slider("float")
     .on("slidechange", function(e, ui) {
       generationNum = ui.value;
       generations = Array.apply(null, Array(generationNum)).map(function(item, i) {
@@ -42,10 +45,13 @@ $(function() {
       max: 200,
       min: 100,
       value: poolSizeNum,
+      step: 20,
     })
-    .slider("float", {
-      rest: "label"
+    .slider("pips", {
+      rest: "label",
+      step: 20,
     })
+    .slider("float")
     .on("slidechange", function(e, ui) {
       poolSizeNum = ui.value;
       // initIndChart();
@@ -76,10 +82,13 @@ $(function() {
       max: 60,
       min: 20,
       value: genesNum,
+      step: 5,
     })
-    .slider("float", {
-      rest: "label"
+    .slider("pips", {
+      rest: "label",
+      step: 5,
     })
+    .slider("float")
     .on("slidechange", function(e, ui) {
       genesNum = ui.value;
       genepoints = Array.apply(null, Array(genesNum)).map(function(item, i) {
